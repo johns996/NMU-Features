@@ -1,0 +1,15 @@
+name = Fearless ThemeKey Settings
+description = Turn on theme key and associate content types with the zen theme
+core = 7.x
+package = Features
+version = 7.x-1.2
+project = fearless_themekey_settings
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = strongarm
+dependencies[] = themekey
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[user_permission][] = administer theme assignments
+features[user_permission][] = administer themekey settings
+project path = sites/all/modules/NMU

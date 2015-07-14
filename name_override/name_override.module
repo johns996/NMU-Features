@@ -1,0 +1,98 @@
+<?php
+
+function name_override_form_alter(&$form, &$form_state, $form_id)
+{
+	if($form_id == 'block_admin_configure' || $form_id == 'block_add_block_form')
+	{
+		$form['settings']['title']['#title'] = 'CSS Class(es)';
+		$form['settings']['title']['#description'] = 'The style sheet class or classes to be used for this block';
+
+		$form['settings']['info']['#description'] = 'A brief description of your block.';
+
+
+		global $user;
+		$bHide = true;
+		foreach($user->roles as $strRole)
+			if($strRole == "administrator" || $strRole == "manager")
+				$bHide = false;
+
+		if($bHide)
+		{
+			print '
+			<style>
+				.vertical-tabs {
+					display:none;
+				}
+				#edit-regions, #edit-visibility-title, edit-body-format-guidelines {
+					display:none;
+				}
+			</style>';
+		}
+	}
+}
+
+
+/**
+* Implementation of hook_menu_alter().
+* Remember to clear the menu cache after adding/editing this function.
+* described here: http://drupal.org/node/483324
+*/
+function name_override_menu_alter(&$items) {
+  // Removing certain local navigation tabs that are either undesired or need to be custom relocated.
+
+  // Set these tabs to MENU_CALLBACK, so they still register the path, but just don't show the tab:
+  global $user;
+  if( !(is_array($user->roles) && in_array('administrator', $user->roles)) ) {
+    $items['node/%node/panel_layout']['type'] = MENU_CALLBACK;
+  }
+  $items['user/%user/edit']['type'] = MENU_CALLBACK;
+  $items['user/register']['type'] = MENU_CALLBACK;
+
+  // Fully unset these tabs and their paths, don't want them at all. This breaks the path as well:
+  unset($items['user/%user/example']);
+  unset($items['user/password']);
+  unset($items['node']);  //hide the default drupal node page that acts like a blog summary page showing all the nodes and an exerpt of their content
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function name_override_form_node_form_alter(&$form, &$form_state, $form_id) {
+  $node_type = $form['#node']->type;
+
+  if (!empty($form['#node']->nid)) {
+    $form['actions']['delete']['#value'] = t('Delete this Page');
+
+    //set a default text format for any script field
+    //setting this value will override any input provided by the user which is only bad if this is set to anything other than php code
+    //since all zen content types will have the scripts hidden in an advanced fieldset, this default format is not needed for zen
+		$name = variable_get('theme_default', NULL);
+    if($name !== 'zen_nmu'){ //turned off for the moment while I get the advanced fiendsets in place
+    	$form['field_scripts']['und'][0]['#format'] = "php_code";
+  	} else {
+  		$form['field_scripts']['und'][0]['#rows'] = "20";
+  	}
+	}
+}
+
+/**
+ * Implements hook_form_CONTENTTYOPE_FORM_ID_alter().
+ * this only applied to content types with the newhome machine name
+ */
+function name_override_form_newhome_node_form_alter(&$form, &$form_state) {
+	//change the 5 main text fields to use the proper format
+	$form['field_main_text']['und'][0]['#format'] = "homepage_editor";
+	$form['field_main_text']['und'][1]['#format'] = "homepage_editor";
+	$form['field_main_text']['und'][2]['#format'] = "homepage_editor";
+	$form['field_main_text']['und'][3]['#format'] = "homepage_editor";
+	$form['field_main_text']['und'][4]['#format'] = "homepage_editor";
+
+	//change the sub text fields to use the proper format
+	$form['field_sub_text_1']['und'][0]['#format'] = "homepage_editor";
+	$form['field_sub_text_2']['und'][0]['#format'] = "homepage_editor";
+	$form['field_sub_text_3']['und'][0]['#format'] = "homepage_editor";
+  return $form;
+}
+
+
+

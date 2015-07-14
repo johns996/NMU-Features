@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fearless Internal Page feature.
+ */
+
+include_once 'fearless_internal_page.features.inc';

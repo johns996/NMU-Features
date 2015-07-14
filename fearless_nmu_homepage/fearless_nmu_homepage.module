@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fearless NMU Homepage feature.
+ */
+
+include_once 'fearless_nmu_homepage.features.inc';

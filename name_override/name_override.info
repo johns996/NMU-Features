@@ -1,0 +1,10 @@
+name = Block Name Override
+description = A series of changes made for the NMU implementation of Drupal.
+core = 7.x
+package = Northern Michigan University
+project = "name_override"
+dependencies[] = "node"
+
+files[] = name_override.module
+
+

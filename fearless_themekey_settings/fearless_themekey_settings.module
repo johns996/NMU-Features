@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fearless ThemeKey Settings feature.
+ */
+
+include_once 'fearless_themekey_settings.features.inc';

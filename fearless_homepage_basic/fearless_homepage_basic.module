@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fearless Homepage-Basic feature.
+ */
+
+include_once 'fearless_homepage_basic.features.inc';
