@@ -252,7 +252,7 @@ function fearless_homepage_field_default_field_instances() {
     'bundle' => 'fearless_homepage',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This field allows &lt;a&gt; and &lt;br&gt; tags.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -724,6 +724,7 @@ Images should have a square aspect ratio and be either 1200x1200 or 400x400.  It
   t('Navigation to Expand');
   t('Right Column');
   t('Scripts');
+  t('This field allows &lt;a&gt; and &lt;br&gt; tags.');
   t('This field can be use to provide a description of a page to search engines and social networks.  Content entered here will be used both in a <strong>meta description</strong> tag and a <strong>og:description tag</strong>.');
   t('Thumbnail Image');
   t('Use this section to upload 2-6 images that will be placed in an image carousel.  

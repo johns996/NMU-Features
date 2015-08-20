@@ -121,7 +121,7 @@ function fearless_homepage_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => 'group-banner field-group-fieldset',
-        'description' => 'This section controls the main departmental banner.  An image, department name and brief description should be provided.',
+        'description' => 'This section controls the main departmental banner.  An image, department name and brief description should be provided.  Up to five images can be provided for the banner image field.  One image will be selected randomly for display each time the page is viewed.',
       ),
       'formatter' => 'collapsible',
     ),
