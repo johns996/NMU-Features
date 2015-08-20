@@ -62,7 +62,7 @@ function alumni_newsletter_field_group_info() {
       'label' => 'Footer',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-footer',
+        'classes' => 'group-footer row',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -125,7 +125,7 @@ function alumni_newsletter_field_group_info() {
       'label' => 'Middle',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-middle',
+        'classes' => 'group-middle row',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -165,6 +165,38 @@ function alumni_newsletter_field_group_info() {
     ),
   );
   $export['group_middle|node|programs_what_s_new_nmu|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_top_row|node|programs_what_s_new_nmu|default';
+  $field_group->group_name = 'group_top_row';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'programs_what_s_new_nmu';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Top Row',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_feature_section',
+      1 => 'field_sidebar',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Top Row',
+      'instance_settings' => array(
+        'classes' => 'row',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
+      ),
+      'formatter' => '',
+    ),
+  );
+  $export['group_top_row|node|programs_what_s_new_nmu|default'] = $field_group;
 
   return $export;
 }
