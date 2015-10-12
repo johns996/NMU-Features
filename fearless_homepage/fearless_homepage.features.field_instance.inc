@@ -290,11 +290,7 @@ function fearless_homepage_field_default_field_instances() {
   // Exported field_instance: 'node-fearless_homepage-field_closing_title'
   $field_instances['node-fearless_homepage-field_closing_title'] = array(
     'bundle' => 'fearless_homepage',
-    'default_value' => array(
-      0 => array(
-        'value' => 'What you\'ll do at NMU',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -334,13 +330,7 @@ function fearless_homepage_field_default_field_instances() {
   // Exported field_instance: 'node-fearless_homepage-field_contact_extra'
   $field_instances['node-fearless_homepage-field_contact_extra'] = array(
     'bundle' => 'fearless_homepage',
-    'default_value' => array(
-      0 => array(
-        'value' => '<p>If you have college credit and want to find out what will transfer to NMU, please visit <a href="/transfercredit">www.nmu.edu/transfercredit</a></p>
-',
-        'format' => 'full_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
