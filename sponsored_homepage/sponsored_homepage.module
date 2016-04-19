@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Sponsored Homepage feature.
+ */
+
+include_once 'sponsored_homepage.features.inc';
