@@ -22,7 +22,7 @@ function sponsored_homepage_ctools_plugin_api($module = NULL, $api = NULL) {
 function sponsored_homepage_node_info() {
   $items = array(
     'sponsored_homepage' => array(
-      'name' => t('Sponsored Homepage'),
+      'name' => t('Homepage'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

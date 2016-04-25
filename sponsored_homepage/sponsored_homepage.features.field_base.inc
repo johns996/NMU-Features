@@ -50,13 +50,32 @@ function sponsored_homepage_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_right_column'.
-  $field_bases['field_right_column'] = array(
+  // Exported field_base: 'field_column_right'.
+  $field_bases['field_column_right'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_right_column',
+    'field_name' => 'field_column_right',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_scripts'.
+  $field_bases['field_scripts'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_scripts',
     'indexes' => array(
       'format' => array(
         0 => 'format',

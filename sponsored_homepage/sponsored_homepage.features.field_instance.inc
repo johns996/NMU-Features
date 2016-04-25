@@ -95,8 +95,8 @@ function sponsored_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-sponsored_homepage-field_right_column'.
-  $field_instances['node-sponsored_homepage-field_right_column'] = array(
+  // Exported field_instance: 'node-sponsored_homepage-field_column_right'.
+  $field_instances['node-sponsored_homepage-field_column_right'] = array(
     'bundle' => 'sponsored_homepage',
     'default_value' => NULL,
     'deleted' => 0,
@@ -107,7 +107,7 @@ function sponsored_homepage_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -117,7 +117,7 @@ function sponsored_homepage_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_right_column',
+    'field_name' => 'field_column_right',
     'label' => 'Right Column',
     'required' => 0,
     'settings' => array(
@@ -131,7 +131,52 @@ function sponsored_homepage_field_default_field_instances() {
         'rows' => 20,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-sponsored_homepage-field_scripts'.
+  $field_instances['node-sponsored_homepage-field_scripts'] = array(
+    'bundle' => 'sponsored_homepage',
+    'default_value' => array(
+      0 => array(
+        'value' => '<!-- // -->',
+        'format' => 'php_code',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_scripts',
+    'label' => 'Scripts',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => -3,
     ),
   );
 
@@ -140,6 +185,7 @@ function sponsored_homepage_field_default_field_instances() {
   t('Body Bottom');
   t('Body Top');
   t('Right Column');
+  t('Scripts');
 
   return $field_instances;
 }
