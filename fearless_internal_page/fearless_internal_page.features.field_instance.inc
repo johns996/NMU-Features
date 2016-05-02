@@ -50,7 +50,7 @@ function fearless_internal_page_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => -4,
     ),
   );
 
@@ -100,7 +100,7 @@ function fearless_internal_page_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => -5,
     ),
   );
 
@@ -137,7 +137,7 @@ function fearless_internal_page_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => -3,
     ),
   );
 

@@ -32,10 +32,10 @@ function fearless_internal_page_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '-7',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '2',
         ),
       ),
       'display' => array(),
