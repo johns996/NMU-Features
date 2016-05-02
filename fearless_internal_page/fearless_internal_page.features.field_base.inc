@@ -10,39 +10,26 @@
 function fearless_internal_page_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_nav_expand'
-  $field_bases['field_nav_expand'] = array(
+  // Exported field_base: 'field_image'.
+  $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_nav_expand',
-    'foreign keys' => array(),
+    'field_name' => 'field_image',
     'indexes' => array(
-      'value' => array(
-        0 => 'value',
+      'fid' => array(
+        0 => 'fid',
       ),
     ),
     'locked' => 0,
-    'module' => 'list',
+    'module' => 'image',
     'settings' => array(
-      'allowed_values' => array(
-        'discover' => 'Discover NMU',
-        'learn' => 'Learn at NMU',
-        'life' => 'Life at NMU',
-        'apply' => 'Apply to NMU',
-        'transfer' => 'Transfer Students',
-        'admitted' => 'Admitted to NMU',
-        'paying' => 'Paying for College',
-        'touch' => 'Get in Touch',
-        'attending' => 'About Attending College',
-        'counseling' => 'Counseling Professionals',
-        'none' => 'Nothing Expanded',
-      ),
-      'allowed_values_function' => '',
+      'default_image' => 0,
+      'uri_scheme' => 'public',
     ),
     'translatable' => 0,
-    'type' => 'list_text',
+    'type' => 'image',
   );
 
   return $field_bases;

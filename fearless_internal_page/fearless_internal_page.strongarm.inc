@@ -25,11 +25,17 @@ function fearless_internal_page_strongarm() {
       'rss' => array(
         'custom_settings' => FALSE,
       ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '6',
         ),
       ),
       'display' => array(),
