@@ -57,13 +57,14 @@ function fearless_homepage_basic_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Image',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-page-image field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-page-image field-group-fieldset',
+        'description' => 'Use this section to add an image to the page.  Text entered into the <em>Title</em> field will be used as a caption.',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_page_image|node|fearless_homepage_basic|form'] = $field_group;
