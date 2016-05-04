@@ -10,7 +10,7 @@
 function fearless_homepage_basic_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-fearless_homepage_basic-body'
+  // Exported field_instance: 'node-fearless_homepage_basic-body'.
   $field_instances['node-fearless_homepage_basic-body'] = array(
     'bundle' => 'fearless_homepage_basic',
     'default_value' => NULL,
@@ -54,8 +54,58 @@ function fearless_homepage_basic_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-fearless_homepage_basic-field_image'.
+  $field_instances['node-fearless_homepage_basic-field_image'] = array(
+    'bundle' => 'fearless_homepage_basic',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => -1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'Page Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => 'PageImages',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '1000x1000',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance:
-  // 'node-fearless_homepage_basic-field_meta_description'
+  // 'node-fearless_homepage_basic-field_meta_description'.
   $field_instances['node-fearless_homepage_basic-field_meta_description'] = array(
     'bundle' => 'fearless_homepage_basic',
     'default_value' => NULL,
@@ -94,7 +144,7 @@ function fearless_homepage_basic_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-fearless_homepage_basic-field_nav_expand'
+  // Exported field_instance: 'node-fearless_homepage_basic-field_nav_expand'.
   $field_instances['node-fearless_homepage_basic-field_nav_expand'] = array(
     'bundle' => 'fearless_homepage_basic',
     'default_value' => NULL,
@@ -131,7 +181,7 @@ function fearless_homepage_basic_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-fearless_homepage_basic-field_scripts'
+  // Exported field_instance: 'node-fearless_homepage_basic-field_scripts'.
   $field_instances['node-fearless_homepage_basic-field_scripts'] = array(
     'bundle' => 'fearless_homepage_basic',
     'default_value' => NULL,
@@ -172,7 +222,7 @@ function fearless_homepage_basic_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-fearless_homepage_basic-field_thumbnail_image'
+  // 'node-fearless_homepage_basic-field_thumbnail_image'.
   $field_instances['node-fearless_homepage_basic-field_thumbnail_image'] = array(
     'bundle' => 'fearless_homepage_basic',
     'deleted' => 0,
@@ -226,6 +276,7 @@ Images should have a square aspect ratio and be either 1200x1200 or 400x400.  It
 Images should have a square aspect ratio and be either 1200x1200 or 400x400.  It is important to note that Facebook will crop this image 1.91:1 ratio (1200x630) so if this image is primarily being added for Facebook, that is the preferred size.<br>');
   t('Meta Description');
   t('Navigation to Expand');
+  t('Page Image');
   t('Scripts');
   t('Select the navigation section that should be shown when a user visits this page.  If nothing is selected, the first option will be selected.');
   t('This field can be use to provide a description of a page to search engines and social networks.  Content entered here will be used both in a <strong>meta description</strong> tag and a <strong>og:description tag</strong>.');
